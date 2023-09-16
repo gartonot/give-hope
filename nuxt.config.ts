@@ -12,6 +12,7 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'ru' },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+      title: 'Благотворительный Фонд',
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     }
   },
