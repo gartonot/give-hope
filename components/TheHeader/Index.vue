@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-  import { useRoute } from '#imports'
   import { LogoIcon } from '~/components/icons'
+  import HeaderMenu from './HeaderMenu.vue'
+  import HeaderBurgerMenu from '~/components/TheHeader/HeaderBurgerMenu.vue'
 
-  const route = useRoute()
-
-  const headerLink = [
+  const headerLinks = [
     {
       id: 1,
       name: 'О нас',
@@ -26,29 +25,19 @@
       href: '#contacts'
     }
   ]
-
-  const linkIsActive = (link: string) => route.path === link
 </script>
 
 <template>
   <header class="header container">
     <a href="/" class="header__logo">
       <logo-icon />
-      <span>
+      <span class="header__logo-text">
         Благотворительный <br />
         Фонд
       </span>
     </a>
-    <nav class="header__menu">
-      <a
-        v-for="link in headerLink"
-        :key="link.id"
-        :href="link.href"
-        :class="['header__menu-link', { active: linkIsActive(link.href) }]"
-      >
-        {{ link.name }}
-      </a>
-    </nav>
+    <header-menu class="header__menu" :header-menu-links="headerLinks" />
+    <header-burger-menu class="header__burger-menu" :header-menu-links="headerLinks" />
   </header>
 </template>
 
@@ -60,25 +49,32 @@
     padding-block: 42px;
 
     &__logo {
-      color: $grey-color;
-      font-size: 20px;
-      line-height: 1.11;
-      text-transform: uppercase;
       display: flex;
       gap: 20px;
+
+      &-text {
+        color: $grey-color;
+        line-height: 1.11;
+        text-transform: uppercase;
+        font-size: 16px;
+
+        @media screen and (min-width: $breakpoint-sm) {
+          font-size: 20px;
+        }
+      }
     }
     &__menu {
-      &-link {
-        color: $grey-color;
-        padding: 12px 20px;
-        border-radius: 25px;
-        font-size: 20px;
-        line-height: 1.11;
+      display: none;
 
-        &.active {
-          background-color: $primary-color;
-          color: $white-color;
-        }
+      @media screen and (min-width: $breakpoint-lg) {
+        display: flex;
+      }
+    }
+    &__burger-menu {
+      display: flex;
+
+      @media screen and (min-width: $breakpoint-lg) {
+        display: none;
       }
     }
   }
