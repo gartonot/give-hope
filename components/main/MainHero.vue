@@ -108,6 +108,11 @@
     position: relative;
     $animation-duration-hands: 0.8s;
     $animation-duration-text: 0.6s;
+    padding-bottom: 125px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      padding-bottom: 260px;
+    }
 
     &__text {
       opacity: 0;
