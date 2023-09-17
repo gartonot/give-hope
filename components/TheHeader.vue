@@ -69,9 +69,11 @@
     }
     &__menu {
       &-link {
-        color: $black-color;
+        color: $grey-color;
         padding: 12px 20px;
         border-radius: 25px;
+        font-size: 20px;
+        line-height: 1.11;
 
         &.active {
           background-color: $primary-color;

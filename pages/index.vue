@@ -1,5 +1,15 @@
+<script lang="ts" setup>
+  import MainHero from '~/components/main/MainHero.vue'
+</script>
+
 <template>
-  <div>
-    <a href="">main</a>
-  </div>
+  <main>
+    <main-hero />
+  </main>
 </template>
+
+<style scoped lang="scss">
+  :global(body) {
+    overflow-x: hidden;
+  }
+</style>
