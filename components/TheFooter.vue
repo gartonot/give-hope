@@ -78,6 +78,7 @@
     font-weight: 400;
     line-height: 111%;
     font-size: 16px;
+    overflow: hidden;
 
     @media screen and (min-width: $breakpoint-lg) {
       font-size: 20px;
@@ -96,9 +97,9 @@
         content: '';
         position: absolute;
         background-color: $blue-color;
-        width: 120%;
+        width: 110%;
         height: 100%;
-        left: -10%;
+        left: -5%;
         top: 0;
         border-radius: 50px 50px 0 0;
 
