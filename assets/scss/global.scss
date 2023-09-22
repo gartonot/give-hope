@@ -48,6 +48,15 @@ a {
 
 .container {
   max-width: 1160px;
-  width: 90%;
+  width: 100%;
+  padding-inline: 24px;
   margin-inline: auto;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    padding-inline: 48px;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding-inline: 60px;
+  }
 }
