@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       title: 'Благотворительный Фонд',
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
     }
   },
   css: ['~/assets/scss/global.scss', '~/assets/scss/fonts.scss'],
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   },
   viewport: {
     breakpoints: {
-      desktop: 1024,
+      desktop: 1160,
       tablet: 768,
       mobile: 600
     }
