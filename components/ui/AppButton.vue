@@ -27,7 +27,7 @@
   .button {
     padding: 20px 20px;
     text-align: center;
-    background: $primary-2-color;
+    background: $blue-color;
     border-radius: 20px;
     border: none;
     color: $white-color;
@@ -36,6 +36,7 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 1.11;
+    cursor: pointer;
 
     @media screen and (min-width: $breakpoint-lg) {
       padding: 20px 40px;

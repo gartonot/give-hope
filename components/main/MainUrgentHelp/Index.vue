@@ -73,7 +73,6 @@
     }
     .donation-name {
       margin-top: 64px;
-      color: $grey-color;
       font-size: 20px;
       font-weight: 700;
       line-height: 1.11;
@@ -86,7 +85,6 @@
       }
     }
     .donation-description {
-      color: $grey-color;
       font-size: 20px;
       font-weight: 400;
       line-height: 111%;

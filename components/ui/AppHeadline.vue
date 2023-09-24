@@ -19,7 +19,6 @@
 
 <style lang="scss" scoped>
   .headline {
-    color: $grey-color;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;

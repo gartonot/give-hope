@@ -105,7 +105,6 @@
       transition: 0.3s ease-out;
 
       &-link {
-        color: $grey-color;
         padding: 12px 20px;
         border-radius: 25px;
         font-size: 20px;

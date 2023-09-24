@@ -10,6 +10,7 @@ body {
   line-height: 1.5;
   font-family: $primary-font;
   font-weight: normal;
+  color: $grey-color;
 }
 
 h1,
@@ -42,6 +43,7 @@ html {
 a {
   display: inline-flex;
   text-decoration: none;
+  color: $grey-color;
 }
 
 .container {

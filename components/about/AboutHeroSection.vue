@@ -225,7 +225,6 @@
         font-style: normal;
         font-weight: 400;
         line-height: 111%;
-        color: $grey-color;
         display: inline-block;
         position: relative;
 

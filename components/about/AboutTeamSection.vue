@@ -61,7 +61,6 @@
     overflow: hidden;
 
     &__title {
-      color: $grey-color;
       font-size: 34px;
       font-style: normal;
       font-weight: 400;
@@ -128,7 +127,6 @@
         }
       }
       &__name {
-        color: $grey-color;
         position: relative;
         font-size: 20px;
         font-style: normal;
