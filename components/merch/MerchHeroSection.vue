@@ -13,9 +13,9 @@
         </p>
         <button class="merch-hero__button">В магазин</button>
         <div class="merch-hero__icons">
-          <img src="/images/merch/hero/image1.png" alt="image1" />
-          <img src="/images/merch/hero/image2.svg" alt="image2" />
-          <img src="/images/merch/hero/image3.png" alt="image3" />
+          <img src="/images/merch/hero/image1.png" alt="image1" loading="lazy" />
+          <img src="/images/merch/hero/image2.svg" alt="image2" loading="lazy" />
+          <img src="/images/merch/hero/image3.png" alt="image3" loading="lazy" />
         </div>
       </div>
       <div class="image-container">
