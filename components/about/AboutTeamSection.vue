@@ -45,7 +45,7 @@
     <div class="team-section__cards">
       <div v-for="worker in workingTeam" :key="worker.name" class="worker-card">
         <div :class="[worker.class]">
-          <img class="worker-card__image" :src="worker.image" :alt="worker.name" />
+          <img class="worker-card__image" :src="worker.image" :alt="worker.name" loading="lazy" />
         </div>
         <p class="worker-card__text">{{ worker.text }}</p>
         <p class="worker-card__name">
@@ -77,8 +77,12 @@
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 50px 0;
-      margin-top: 100px;
+      margin-top: 50px;
       padding-top: 10px;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-top: 100px;
+      }
 
       @media screen and (min-width: $breakpoint-md) {
         gap: 90px 0;
