@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+  import { useNuxtApp, computed } from '#imports'
   import AppHeadline from '~/components/ui/AppHeadline.vue'
   import { WeInVkIcon } from '~/components/icons'
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { Navigation } from 'swiper/modules'
   import 'swiper/css'
   import 'swiper/scss/navigation'
+
+  const { $viewport } = useNuxtApp()
 
   const sliderImages = [
     '/images/sliders/slide-1.png',
@@ -16,6 +19,8 @@
   ]
 
   const modules = [Navigation]
+
+  const isLessThanTablet = computed(() => $viewport.isLessThan('tablet'))
 </script>
 
 <template>
@@ -23,7 +28,13 @@
     <div class="container">
       <app-headline label="Мы постоянно помогаем" />
       <div class="slider__wrapper">
-        <swiper loop centered-slides :slides-per-view="3" :space-between="50" :modules="modules">
+        <swiper
+          loop
+          centered-slides
+          :slides-per-view="isLessThanTablet ? 1 : 3"
+          :space-between="50"
+          :modules="modules"
+        >
           <swiper-slide v-for="(imageSrc, index) in sliderImages" :key="index">
             <img
               :src="imageSrc"
@@ -44,7 +55,11 @@
 
 <style lang="scss" scoped>
   .swiper-slide-active {
-    transform: scale(1.2);
+    transform: scale(1);
+
+    @media screen and (min-width: $breakpoint-md) {
+      transform: scale(1.2);
+    }
   }
   .swiper-slide img {
     width: 100%;
