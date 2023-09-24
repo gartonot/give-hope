@@ -31,7 +31,7 @@
 </script>
 
 <template>
-  <footer class="footer">
+  <footer id="contacts" class="footer">
     <div class="container footer-background">
       <div class="footer-wrapper">
         <div class="footer-contacts">
