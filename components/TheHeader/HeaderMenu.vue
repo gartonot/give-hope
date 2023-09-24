@@ -29,7 +29,6 @@
 <style lang="scss" scoped>
   .header-menu {
     &__link {
-      color: $grey-color;
       padding: 12px 20px;
       border-radius: 25px;
       font-size: 20px;

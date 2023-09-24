@@ -53,7 +53,6 @@
       gap: 20px;
 
       &-text {
-        color: $grey-color;
         line-height: 1.11;
         text-transform: uppercase;
         font-size: 16px;
