@@ -24,7 +24,6 @@
     }
 
     &__title {
-      color: $grey-color;
       font-size: 34px;
       font-style: normal;
       font-weight: 400;
@@ -110,10 +109,22 @@
         border: 1px solid transparent;
         background-color: $blue-color;
         color: $white-color;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 111%;
         margin-inline: auto;
         margin-top: 30px;
         display: flex;
         white-space: nowrap;
+
+        @media screen and (min-width: $breakpoint-sm) {
+          font-size: 20px;
+        }
+
+        @media screen and (min-width: $breakpoint-lg) {
+          font-size: 30px;
+        }
       }
     }
   }
