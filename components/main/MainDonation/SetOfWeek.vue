@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { PackageIcon } from '~/components/icons/index'
+  import { PackageIcon } from '~/components/icons'
   import AppButton from '~/components/ui/AppButton.vue'
 
   const sendSetOfWeekForm = () => {

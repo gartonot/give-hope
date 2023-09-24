@@ -6,15 +6,16 @@
     width: number,
     height: number
   }
-  interface IProps {
-    program: {
+  interface IProgram {
       id: number,
       title: string,
       description: string,
       programUrl: string,
       image: IImage,
       isCollection: boolean
-    }
+  }
+  interface IProps {
+    program: IProgram
   }
 
   const props = defineProps<IProps>()
