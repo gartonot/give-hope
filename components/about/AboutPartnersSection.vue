@@ -16,7 +16,13 @@
     <div class="container partners-section-container">
       <h2 class="partners-section__title">Наши друзья и партнеры</h2>
       <div class="partners-section__partners">
-        <img v-for="(partner, index) in partners" :key="index" :src="partner.image" alt="partner" />
+        <img
+          v-for="(partner, index) in partners"
+          :key="index"
+          :src="partner.image"
+          alt="partner"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
