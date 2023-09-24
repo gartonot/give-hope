@@ -4,6 +4,7 @@
   import AboutAmbassadorsSection from '~/components/about/AboutAmbassadorsSection.vue'
   import AboutTeamSection from '~/components/about/AboutTeamSection.vue'
   import AboutVolunteersSection from '~/components/about/AboutVolunteersSection.vue'
+  import AboutPartnersSection from '~/components/about/AboutPartnersSection.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@
     <about-team-section class="about-benefits" />
     <about-ambassadors-section class="about-ambassadors" />
     <about-volunteers-section class="about-volunteers" />
+    <about-partners-section class="about-partners" />
   </main>
 </template>
 
@@ -30,6 +32,10 @@
 
     &-volunteers {
       margin-top: 280px;
+    }
+
+    &-partners {
+      margin-top: 30px;
     }
   }
 </style>
