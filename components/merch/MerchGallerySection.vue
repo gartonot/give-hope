@@ -76,7 +76,7 @@
         z-index: -1;
         left: -2%;
         bottom: 8px;
-        background-color: rgba($primary-color, 0.37);
+        background-color: $primary-color;
         transform: rotate(-1deg);
       }
 
