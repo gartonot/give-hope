@@ -3,9 +3,9 @@
   import AppHeadline from '~/components/ui/AppHeadline.vue'
   import { WeInVkIcon } from '~/components/icons'
   import { Swiper, SwiperSlide } from 'swiper/vue'
-  import { Navigation } from 'swiper/modules'
+  import { Pagination } from 'swiper/modules'
   import 'swiper/css'
-  import 'swiper/scss/navigation'
+  import 'swiper/css/pagination'
 
   const { $viewport } = useNuxtApp()
 
@@ -18,7 +18,7 @@
     '/images/sliders/slide-3.png'
   ]
 
-  const modules = [Navigation]
+  const modules = [Pagination]
 
   const isLessThanTablet = computed(() => $viewport.isLessThan('tablet'))
 </script>
@@ -33,6 +33,7 @@
           centered-slides
           :slides-per-view="isLessThanTablet ? 1 : 3"
           :space-between="50"
+          pagination
           :modules="modules"
         >
           <swiper-slide v-for="(imageSrc, index) in sliderImages" :key="index">
@@ -54,6 +55,9 @@
 </template>
 
 <style lang="scss" scoped>
+  :deep(.swiper-pagination) {
+    bottom: -6px !important;
+  }
   .swiper-slide-active {
     transform: scale(1);
 

@@ -5,6 +5,20 @@
 <template>
   <section class="map">
     <div class="container">
+      <img
+        class="particle-arrow-right-dotted"
+        src="/images/main/particle/arrow-right-dotted.svg"
+        width="464"
+        height="135"
+        alt="Arrow right dotted"
+      />
+      <img
+        class="particle-stars"
+        src="/images/main/particle/stars.svg"
+        width="388"
+        height="373"
+        alt="Stars"
+      />
       <app-headline class="map__title" label="Мы работаем на территории" />
       <img
         class="map__img"
@@ -22,7 +36,27 @@
 </template>
 
 <style lang="scss" scoped>
+  .particle-arrow-right-dotted {
+    position: absolute;
+    left: 45%;
+    display: none;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      display: block;
+    }
+  }
+  .particle-stars {
+    position: absolute;
+    right: 70px;
+    display: none;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      display: block;
+    }
+  }
   .map {
+    position: relative;
+
     &__title {
       margin-left: 0;
       max-width: 100%;
@@ -35,6 +69,7 @@
       }
     }
     &__img {
+      position: relative;
       width: 100%;
       height: auto;
       margin-top: 24px;
