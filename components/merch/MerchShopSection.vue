@@ -1,6 +1,4 @@
 <script setup lang="ts">
-  import { backgroundColors } from 'chalk'
-
   const products = [
     {
       name: 'тёмно-серая',
