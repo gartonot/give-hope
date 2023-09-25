@@ -31,10 +31,6 @@
   <header class="header container">
     <a href="/" class="header__logo">
       <logo-icon />
-      <span class="header__logo-text">
-        Благотворительный <br />
-        Фонд
-      </span>
     </a>
     <header-menu class="header__menu" :header-menu-links="headerLinks" />
     <header-burger-menu class="header__burger-menu" :header-menu-links="headerLinks" />
@@ -51,16 +47,6 @@
     &__logo {
       display: flex;
       gap: 20px;
-
-      &-text {
-        line-height: 1.11;
-        text-transform: uppercase;
-        font-size: 16px;
-
-        @media screen and (min-width: $breakpoint-sm) {
-          font-size: 20px;
-        }
-      }
     }
     &__menu {
       display: none;
