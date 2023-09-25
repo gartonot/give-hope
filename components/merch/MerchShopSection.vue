@@ -48,6 +48,7 @@
 <style scoped lang="scss">
   .shop-section {
     padding-bottom: 30px;
+    overflow: hidden;
 
     &__container {
       padding-top: 290px;
