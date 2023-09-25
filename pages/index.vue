@@ -4,15 +4,17 @@
   import MainDonation from '~/components/main/MainDonation/Index.vue'
   import MainPrograms from '~/components/main/MainPrograms/Index.vue'
   import MainSlider from '~/components/main/MainSlider.vue'
+  import MainMap from '~/components/main/MainMap.vue'
 </script>
 
 <template>
-  <main>
+  <main class="main">
     <main-hero />
     <main-urgent-help v-if="false" class="main__urgent-help" />
     <main-donation class="main__donation" />
     <main-programs class="main__programs" />
     <main-slider class="main__slider" />
+    <main-map class="main__map" />
   </main>
 </template>
 
@@ -22,6 +24,15 @@
   }
 
   .main {
+    padding-bottom: 40px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      padding-bottom: 100px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      padding-bottom: 200px;
+    }
+
     &__urgent-help {
       margin-top: 100px;
 
@@ -60,6 +71,16 @@
       }
       @media screen and (min-width: $breakpoint-lg) {
         margin-top: 220px;
+      }
+    }
+    &__map {
+      margin-top: 100px;
+
+      @media screen and (min-width: $breakpoint-md) {
+        margin-top: 180px;
+      }
+      @media screen and (min-width: $breakpoint-lg) {
+        margin-top: 270px;
       }
     }
   }
