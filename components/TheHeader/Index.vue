@@ -11,8 +11,8 @@
     },
     {
       id: 2,
-      name: 'Программы',
-      href: '/program'
+      name: 'Отчеты',
+      href: '/reports'
     },
     {
       id: 3,
