@@ -16,29 +16,29 @@
   const information = [
     {
       text: 'Политика в отношени  обработки персональных данных',
-      url: ''
+      url: '/personaldatapolicy'
     },
     {
       text: 'Пользовательское соглашение',
-      url: ''
+      url: '/useragreement'
     },
     {
       text: 'Финансовая отчётность',
-      url: ''
+      url: '/reports'
     }
   ]
   const documents = [
     {
       text: 'Благотворительная программа',
-      url: ''
+      url: '/charityprogram'
     },
     {
       text: 'Уставные документы',
-      url: ''
+      url: '/docs'
     },
     {
       text: 'Оферта',
-      url: ''
+      url: '/offer'
     }
   ]
 </script>

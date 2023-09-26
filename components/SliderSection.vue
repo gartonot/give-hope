@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import { useNuxtApp, computed } from '#imports'
   import AppHeadline from '~/components/ui/AppHeadline.vue'
-  import { WeInVkIcon } from '~/components/icons'
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { Pagination } from 'swiper/modules'
   import 'swiper/css'
