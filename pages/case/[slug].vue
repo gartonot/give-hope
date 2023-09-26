@@ -3,7 +3,7 @@
   import SubscribeNewsletter from '~/components/SubscribeNewsletter.vue'
   import { useRoute } from '#imports'
   import CaseBodySection from '~/components/case/CaseBodySection.vue'
-  import CaseGalerySection from '~/components/case/CaseGalerySection.vue'
+  import CaseGallerySection from '~/components/case/CaseGallerySection.vue'
 
   const route = useRoute()
   const slug = route.params.slug as string
@@ -45,7 +45,7 @@
   <main class="case">
     <case-hero-section :settings="currentCase.heroSection" />
     <case-body-section :settings="currentCase.bodySection" class="body-section" />
-    <case-galery-section :settings="currentCase.gallerySection" class="gallery-section" />
+    <case-gallery-section :settings="currentCase.gallerySection" class="gallery-section" />
     <subscribe-newsletter class="subscribe-section" />
   </main>
 </template>
