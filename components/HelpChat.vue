@@ -1,6 +1,8 @@
 <script setup lang="ts">
   import CustomCheckbox from '~/components/CustomCheckbox.vue'
+  import { useNuxtApp } from '#imports'
 
+  const { $helpChat } = useNuxtApp()
   const programs = [
     {
       name: 'Пожилым людям',
@@ -32,7 +34,7 @@
 <template>
   <div class="help-chat">
     <div class="help-chat__container">
-      <div class="help-chat__dialog">
+      <div v-show="$helpChat.status" class="help-chat__dialog">
         <custom-checkbox />
         <p class="help-chat__dialog-title">Выбери программу</p>
         <button v-for="program in programs" :key="program.id" class="help-chat__dialog-program">
@@ -57,7 +59,7 @@
         </p>
       </div>
       <div class="help-chat__button-wrapper">
-        <button class="help-chat__button">Помочь</button>
+        <button class="help-chat__button" @click="$helpChat.change()">Помочь</button>
       </div>
     </div>
   </div>
