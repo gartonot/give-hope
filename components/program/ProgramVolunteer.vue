@@ -1,5 +1,9 @@
 <script lang="ts" setup>
   import AppButton from '~/components/ui/AppButton.vue'
+  import { useRuntimeConfig } from '#imports'
+
+  const runtimeConfig = useRuntimeConfig()
+  const { vkUrl } = runtimeConfig.public
 </script>
 
 <template>
@@ -13,11 +17,7 @@
         заинтересованных в оказании помощи нуждающимся и в повышении социальной ответственности
         компании.
       </p>
-      <app-button
-        class="volunteer-section__button"
-        label="Стать волонтёром"
-        href="https://vk.com/darinadezhduu"
-      />
+      <app-button class="volunteer-section__button" label="Стать волонтёром" :href="vkUrl" />
       <svg
         class="particle-stars"
         width="191"

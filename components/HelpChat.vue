@@ -98,6 +98,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
       }
 
       &-title {
@@ -151,6 +152,7 @@
         padding-block: 20px;
         width: 100%;
         margin-top: 16px;
+        cursor: pointer;
 
         @media screen and (min-width: $breakpoint-sm) {
           font-size: 20px;
@@ -181,6 +183,7 @@
       font-weight: 700;
       line-height: 111%;
       padding: 10px 30px;
+      cursor: pointer;
 
       @media screen and (min-width: $breakpoint-sm) {
         font-size: 25px;

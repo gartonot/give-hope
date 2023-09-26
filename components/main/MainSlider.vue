@@ -6,7 +6,10 @@
   import { Pagination } from 'swiper/modules'
   import 'swiper/css'
   import 'swiper/css/pagination'
+  import { useRuntimeConfig } from '#imports'
 
+  const runtimeConfig = useRuntimeConfig()
+  const { vkUrl } = runtimeConfig.public
   const { $viewport } = useNuxtApp()
 
   const sliderImages = [
@@ -47,7 +50,7 @@
           </swiper-slide>
         </swiper>
       </div>
-      <a href="https://vk.com/darinadezhduu" target="_blank" class="slider__link">
+      <a :href="vkUrl" target="_blank" class="slider__link">
         <we-in-vk-icon />
       </a>
     </div>

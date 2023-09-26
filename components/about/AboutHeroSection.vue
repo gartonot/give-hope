@@ -1,5 +1,9 @@
 <script setup lang="ts">
   import { VkIcon } from '~/components/icons'
+  import { useRuntimeConfig } from '#imports'
+
+  const runtimeConfig = useRuntimeConfig()
+  const { vkUrl } = runtimeConfig.public
 
   const benefits = [
     {
@@ -41,7 +45,7 @@
           </p>
           <div class="about-hero__social">
             <vk-icon />
-            <div>dary_nadezhdu</div>
+            <a :href="vkUrl" class="about-hero__social-link">dary_nadezhdu</a>
           </div>
         </div>
         <div class="about-hero__image-wrapper">
@@ -151,6 +155,10 @@
       gap: 20px;
       align-items: center;
       margin-top: 42px;
+    }
+
+    &__social-link {
+      color: $blue-color;
     }
 
     &__image-wrapper {

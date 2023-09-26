@@ -98,6 +98,7 @@
       margin-top: 25px;
       display: flex;
       white-space: nowrap;
+      cursor: pointer;
 
       @media screen and (min-width: $breakpoint-sm) {
         font-size: 20px;

@@ -1,3 +1,10 @@
+<script lang="ts" setup>
+  import { useRuntimeConfig } from '#imports'
+
+  const runtimeConfig = useRuntimeConfig()
+  const { vkUrl } = runtimeConfig.public
+</script>
+
 <template>
   <section class="volunteers-section">
     <div class="container">
@@ -9,7 +16,7 @@
           помощь тем, кто в ней нуждается. Мы пришли вместе из разных сфер жизни, возрастов и
           профессий, но нас объединяет желание сделать этот мир лучше.
         </p>
-        <button class="card__button">Стать волонтером</button>
+        <a :href="vkUrl" class="card__button">Стать волонтером</a>
       </div>
     </div>
   </section>
@@ -54,6 +61,7 @@
       margin-top: 130px;
       padding: 110px 20px 80px;
       position: relative;
+      text-align: center;
 
       &:before {
         content: '';
@@ -113,9 +121,8 @@
         font-style: normal;
         font-weight: 500;
         line-height: 111%;
-        margin-inline: auto;
         margin-top: 30px;
-        display: flex;
+        display: inline-flex;
         white-space: nowrap;
 
         @media screen and (min-width: $breakpoint-sm) {

@@ -104,6 +104,7 @@
       white-space: nowrap;
       width: 100%;
       justify-content: center;
+      cursor: pointer;
 
       @media screen and (min-width: $breakpoint-sm) {
         font-size: 20px;

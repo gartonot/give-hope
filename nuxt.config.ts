@@ -32,5 +32,10 @@ export default defineNuxtConfig({
       tablet: 768,
       mobile: 600
     }
+  },
+  runtimeConfig: {
+    public: {
+      vkUrl: 'https://vk.com/darinadezhduu'
+    }
   }
 })
