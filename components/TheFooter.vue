@@ -83,6 +83,13 @@
             <div>ПОДПИСАТЬСЯ</div>
             <input class="footer-social__input" type="text" placeholder="ваш имейл" />
           </div>
+          <button class="footer-social__subscribe-send">
+            <img
+              src="/images/footer/send-svgrepo-com.svg"
+              alt="send"
+              class="footer-social__subscribe-send-image"
+            />
+          </button>
         </div>
       </div>
       <div class="footer-project-info">© 2020 Благотворительный фонд "Дари Надежду"</div>
@@ -189,6 +196,25 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+      }
+
+      &__subscribe-send {
+        background-color: $white-color;
+        max-height: 30px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        margin-top: 38px;
+        cursor: pointer;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          margin-top: 44px;
+        }
+      }
+
+      &__subscribe-send-image {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
       }
 
       &__input {
