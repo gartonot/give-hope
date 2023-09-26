@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import CustomCheckbox from '~/components/CustomCheckbox.vue'
   import { useNuxtApp } from '#imports'
+  import { ref } from 'vue'
 
   const { $helpChat } = useNuxtApp()
   const programs = [
@@ -29,6 +30,10 @@
       price: 300
     }
   ]
+  const selectedProgram = ref<number | null>(null)
+  const selectProgram = (id: number) => {
+    selectedProgram.value = id === selectedProgram.value ? null : id
+  }
 </script>
 
 <template>
@@ -37,7 +42,15 @@
       <div v-show="$helpChat.status" class="help-chat__dialog">
         <custom-checkbox />
         <p class="help-chat__dialog-title">Выбери программу</p>
-        <button v-for="program in programs" :key="program.id" class="help-chat__dialog-program">
+        <button
+          v-for="program in programs"
+          :key="program.id"
+          :class="[
+            'help-chat__dialog-program',
+            { 'active-program': selectedProgram === program.id }
+          ]"
+          @click="selectProgram(program.id)"
+        >
           <img class="help-chat__dialog-image" :src="program.image" :alt="program.name" />
           {{ program.name }}
           <strong>{{ program.price }} ₽</strong>
@@ -99,6 +112,10 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+      }
+
+      .active-program {
+        background-color: rgba($white-color, 0.6);
       }
 
       &-title {
