@@ -1,5 +1,18 @@
 <script setup lang="ts">
-  const contacts = ['darinadezhduu@gmail.com', '+7 (985) 622-21-01', ' Николоямская улица 26с']
+  const contacts = [
+    {
+      text: 'darinadezhduu@gmail.com',
+      url: 'mailto:darinadejduu@gmail.com'
+    },
+    {
+      text: '+7 (985) 622-21-01',
+      url: 'tel:+79856222101'
+    },
+    {
+      text: 'Николоямская улица 26с',
+      url: undefined
+    }
+  ]
   const information = [
     {
       text: 'Политика в отношени  обработки персональных данных',
@@ -36,9 +49,14 @@
       <div class="footer-wrapper">
         <div class="footer-contacts">
           <span>КОНТАКТЫ</span>
-          <p v-for="(contact, index) in contacts" :key="index" class="footer_link">
-            {{ contact }}
-          </p>
+          <a
+            v-for="(contact, index) in contacts"
+            :key="index"
+            class="footer_link"
+            :href="contact.url"
+          >
+            {{ contact.text }}
+          </a>
         </div>
         <div class="footer-information">
           <span>ИНФОРМАЦИЯ</span>
@@ -63,7 +81,7 @@
           </div>
           <div class="footer-social__subscribe">
             <div>ПОДПИСАТЬСЯ</div>
-            <button class="footer-social__button">ваш имейл</button>
+            <input class="footer-social__input" type="text" placeholder="ваш имейл" />
           </div>
         </div>
       </div>
@@ -173,7 +191,7 @@
         text-align: center;
       }
 
-      &__button {
+      &__input {
         border: 1px solid transparent;
         border-radius: 10px;
         background-color: $white-color;
