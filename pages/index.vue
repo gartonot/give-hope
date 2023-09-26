@@ -12,7 +12,7 @@
     <main-hero />
     <main-urgent-help v-if="false" class="main__urgent-help" />
     <main-donation class="main__donation" />
-    <main-programs class="main__programs" />
+    <main-programs id="program" class="main__programs" />
     <main-slider class="main__slider" />
     <main-map class="main__map" />
   </main>

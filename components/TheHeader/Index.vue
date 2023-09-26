@@ -11,16 +11,21 @@
     },
     {
       id: 2,
+      name: 'Программы',
+      href: '/#program'
+    },
+    {
+      id: 3,
       name: 'Отчеты',
       href: '/reports'
     },
     {
-      id: 3,
+      id: 4,
       name: 'Мерч',
       href: '/merch'
     },
     {
-      id: 4,
+      id: 5,
       name: 'Контакты',
       href: '#contacts'
     }
