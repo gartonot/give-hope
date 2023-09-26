@@ -103,6 +103,8 @@
       padding: 20px;
       border-radius: 8px;
       transition: 0.3s ease-out;
+      background-color: $white-color;
+      z-index: 10;
 
       &-link {
         padding: 12px 20px;
