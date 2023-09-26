@@ -105,6 +105,7 @@
 
 <style lang="scss" scoped>
   .hero {
+    overflow: hidden;
     position: relative;
     $animation-duration-hands: 0.8s;
     $animation-duration-text: 0.6s;
