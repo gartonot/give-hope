@@ -5,12 +5,14 @@
   import MainPrograms from '~/components/main/MainPrograms/Index.vue'
   import MainSlider from '~/components/main/MainSlider.vue'
   import MainMap from '~/components/main/MainMap.vue'
+  import MainHelp from '~/components/main/MainHelp.vue'
 </script>
 
 <template>
   <main class="main">
     <main-hero />
     <main-urgent-help v-if="false" class="main__urgent-help" />
+    <main-help />
     <main-donation class="main__donation" />
     <main-programs id="program" class="main__programs" />
     <main-slider class="main__slider" />
