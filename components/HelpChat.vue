@@ -95,15 +95,19 @@
     }
 
     &__dialog {
-      padding: 30px 30px 50px;
+      padding: 20px 20px 20px;
       background-color: $blue-dark-color;
       border-radius: 20px;
       max-width: 320px;
       min-width: 320px;
 
+      @media screen and (min-width: $breakpoint-sm) {
+        padding: 30px 30px 50px;
+      }
+
       &-program {
         width: 100%;
-        margin-top: 12px;
+        margin-top: 8px;
         background-color: $white-color;
         border: 1px solid transparent;
         border-radius: 15px;
@@ -112,6 +116,10 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+
+        @media screen and (min-width: $breakpoint-sm) {
+          margin-top: 12px;
+        }
       }
 
       .active-program {
@@ -120,7 +128,11 @@
 
       &-title {
         color: $white-color;
-        margin-top: 20px;
+        margin-top: 10px;
+
+        @media screen and (min-width: $breakpoint-sm) {
+          margin-top: 20px;
+        }
       }
 
       &-image {
@@ -166,13 +178,14 @@
         font-style: normal;
         font-weight: 700;
         line-height: 111%;
-        padding-block: 20px;
+        padding-block: 10px;
         width: 100%;
         margin-top: 16px;
         cursor: pointer;
 
         @media screen and (min-width: $breakpoint-sm) {
           font-size: 20px;
+          padding-block: 20px;
         }
       }
       &-description {
@@ -186,8 +199,12 @@
     }
 
     &__button-wrapper {
-      margin-top: 30px;
+      margin-top: 10px;
       text-align: end;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-top: 30px;
+      }
     }
 
     &__button {
