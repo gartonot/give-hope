@@ -23,9 +23,6 @@
 </template>
 
 <style scoped lang="scss">
-  .title {
-    color: $primary-color;
-  }
   .slider {
     margin-top: 20px;
     padding: 50px 0;
