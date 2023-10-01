@@ -1,6 +1,10 @@
 <script lang="ts" setup>
-  import { ref, watch } from '#imports'
+  import { ref, watch, toRefs } from '#imports'
   import AppButton from '~/components/ui/AppButton.vue'
+
+  interface IProps {
+    frequencyIsShown?: boolean
+  }
 
   interface IFormData {
     sum: number
@@ -59,6 +63,11 @@
   ])
   const customSum = ref()
 
+  const props = withDefaults(defineProps<IProps>(), {
+    frequencyIsShown: false
+  })
+  const { frequencyIsShown } = toRefs(props)
+
   watch(customSum, () => {
     buttonsSum.value.forEach(button => (button.isSelect = false))
   })
@@ -101,7 +110,7 @@
 
 <template>
   <div class="donation-form">
-    <div class="donation-form__select form-select">
+    <div v-if="frequencyIsShown" class="donation-form__select form-select">
       <button
         v-for="button in buttonsFrequency"
         :key="button.id"

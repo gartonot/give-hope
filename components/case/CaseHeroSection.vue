@@ -106,6 +106,7 @@
     &__image {
       margin-top: 75px;
       width: 100%;
+      border-radius: 8px;
     }
 
     &__description {

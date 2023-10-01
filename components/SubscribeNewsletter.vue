@@ -5,9 +5,6 @@
     <div class="container">
       <div class="subscribe-section__content">
         <h2 class="subscribe-section__title">Подпишитесь на нашу рассылку</h2>
-        <p class="subscribe-section__text">
-          И каждый месяц получай новости проекта с отчетами о деятельности
-        </p>
         <div class="subscribe-section__input-wrapper">
           <input class="subscribe-section__input" type="text" placeholder="E-mail" />
           <input class="subscribe-section__input" type="text" placeholder="Ваше имя" />
@@ -77,21 +74,9 @@
       }
     }
 
-    &__text {
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 111%;
-      margin-top: 20px;
-
-      @media screen and (min-width: $breakpoint-md) {
-        font-size: 20px;
-      }
-    }
-
     &__button {
       padding: 18px 62px;
-      border-radius: 25px;
+      border-radius: 8px;
       border: 1px solid transparent;
       background-color: $blue-color;
       color: $white-color;
@@ -131,7 +116,7 @@
     }
 
     &__input {
-      border-radius: 20px;
+      border-radius: 8px;
       border: 3px solid $blue-color;
       padding: 16px 20px;
       font-size: 16px;

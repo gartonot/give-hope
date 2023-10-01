@@ -3,37 +3,37 @@
     {
       name: 'Краснова Дарина Борисовна',
       image: '/images/about/team/darina.png',
-      text: 'Учредитель и руководитель программы "Дари Ремонт',
+      text: 'Основатель и учредитель Фонда',
       class: 'worker-card__image-sun'
     },
     {
       name: 'Горяинова Анастасия Александровна',
       image: '/images/about/team/anastasia.png',
-      text: 'Генеральный директор',
+      text: 'Директор',
       class: ''
     },
     {
       name: 'Сидорова Эльмина Валерьевна',
-      image: '/images/about/team/darina.png',
+      image: '/images/about/team/other.png',
       text: 'Главный бухгалтер',
       class: ''
     },
     {
       name: 'Басиладзе Мариами Рамазиевна',
       image: '/images/about/team/mariami.png',
-      text: 'Видеограф',
+      text: 'Создатель фото и видео контента',
       class: ''
     },
     {
-      name: 'Горяинова Анастасия Александровна',
-      image: '/images/about/team/anastasia.png',
-      text: 'Генеральный директор',
+      name: 'Неоронова Алиса Павловна',
+      image: '/images/about/team/alisa.png',
+      text: 'Создатель фото и видео контента',
       class: 'worker-card__image-star'
     },
     {
-      name: 'Сидорова Эльмина Валерьевна',
-      image: '/images/about/team/darina.png',
-      text: 'Главный бухгалтер',
+      name: 'Наумова Валерия Александровна',
+      image: '/images/about/team/other.png',
+      text: 'Юрист',
       class: ''
     }
   ]

@@ -2,17 +2,17 @@
   import { toRefs } from '#imports'
 
   interface IImage {
-    src: string,
-    width: number,
+    src: string
+    width: number
     height: number
   }
   interface IProgram {
-      id: number,
-      title: string,
-      description: string,
-      programUrl: string,
-      image: IImage,
-      isCollection: boolean
+    id: number
+    title: string
+    description: string
+    programUrl: string
+    image: IImage
+    isCollection: boolean
   }
   interface IProps {
     program: IProgram
@@ -77,7 +77,7 @@
   .card {
     background-color: $blue-color;
     border-radius: 30px;
-    padding:  40px;
+    padding: 40px;
     color: $white-color;
 
     &__title {

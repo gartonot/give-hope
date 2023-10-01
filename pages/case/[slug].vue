@@ -175,6 +175,115 @@
           '/images/case/case-image3.png'
         ]
       }
+    },
+    'psy-klimentevo': {
+      heroSection: {
+        title: 'Уютная старость №1',
+        image: {
+          src: '/images/case/cozy-old-age/case1.png',
+          alt: 'case2'
+        },
+        description:
+          'Ремонт прачечной в отделении сестринского ухода при Клементьевской участковой больнице.'
+      },
+      bodySection: {
+        title: 'Чем мы помогли?',
+        text:
+          'В отделении на постоянной основе проживает ~25 человек из них 85% это маломобильные люди, прикованные к кроватям.За ними нужен специальный уход, постоянные гигиенические процедуры, обработка пролежней и прочее. </br></br>' +
+          'Количество белья в день, которое надо постирать, высушить и погладить около 60 кг.Весь этот процесс лежит на хрупких плечах Светланы Николаевны, которая ежедневно работала в неблагоприятных условиях, но благодаря которой в отделении совершенно отсутствует специфический запах, характерный для подобных мест.Это огромная и очень важная часть бесперебойного процесса работы отделения и очень важная часть для поддержания чистоты и достойных условий проживания бабушек и дедушек.<br><br>' +
+          'За 26 лет прачечную ни разу не ремонтировали,но мы исправили это с вашей помощью! Этот ремонт был нашей мечтой много лет.С первого приезда в учреждение мы четко решили, что улучшим качество проживания бабушек и дедушек, а так же условия работы сотрудников.<br><br>' +
+          'Сегодня у нас полностью отремонтированные палаты, столовая, пищеблок,ванные комнаты, коридоры, которые оборудованы по стандартам доступной среды и обновленная прачечная, в которой ежедневно стирают и гладят белье и одежду.<br><br>' +
+          'Спасибо другу Фонда, который полностью помог закрыть сбор на ремонт и осуществил нашу общую большую мечту!<br><br>'
+      },
+      gallerySection: {
+        title: 'Галерея',
+        images: [
+          '/images/case/cozy-old-age/image1.png',
+          '/images/case/cozy-old-age/image2.png',
+          '/images/case/cozy-old-age/image3.png',
+          '/images/case/cozy-old-age/image4.png',
+          '/images/case/cozy-old-age/image5.png',
+          '/images/case/cozy-old-age/image6.png',
+          '/images/case/cozy-old-age/image7.png',
+          '/images/case/cozy-old-age/image8.png',
+          '/images/case/cozy-old-age/image9.png',
+          '/images/case/cozy-old-age/image10.png'
+        ]
+      }
+    },
+    'rzhevskij-dom-internat': {
+      heroSection: {
+        title: 'Пожилым людям №1',
+        image: {
+          src: '/images/case/rzhevskij-dom-internat.png',
+          alt: 'case2'
+        },
+        description: ''
+      },
+      bodySection: {
+        title: '',
+        text: ''
+      },
+      gallerySection: {
+        title: 'Галерея',
+        images: [
+          '/images/case/rzhevskij-dom-internat/image1.png',
+          '/images/case/rzhevskij-dom-internat/image2.png',
+          '/images/case/rzhevskij-dom-internat/image3.png',
+          '/images/case/rzhevskij-dom-internat/image4.png'
+        ]
+      }
+    },
+    'psy-klimentevo-2': {
+      heroSection: {
+        title: 'Пожилым людям №2',
+        image: {
+          src: '/images/case/cozy-old-age/case1.png',
+          alt: 'case2'
+        },
+        description: ''
+      },
+      bodySection: {
+        title: '',
+        text: ''
+      },
+      gallerySection: {
+        title: 'Галерея',
+        images: [
+          '/images/case/cozy-old-age/image1.png',
+          '/images/case/cozy-old-age/image2.png',
+          '/images/case/cozy-old-age/image3.png',
+          '/images/case/cozy-old-age/image4.png',
+          '/images/case/cozy-old-age/image5.png',
+          '/images/case/cozy-old-age/image6.png',
+          '/images/case/cozy-old-age/image7.png',
+          '/images/case/cozy-old-age/image8.png',
+          '/images/case/cozy-old-age/image9.png',
+          '/images/case/cozy-old-age/image10.png'
+        ]
+      }
+    },
+    bereginya: {
+      heroSection: {
+        title: 'Пожилым людям №3',
+        image: {
+          src: '/images/case/bereginya.png',
+          alt: 'case2'
+        },
+        description: ''
+      },
+      bodySection: {
+        title: '',
+        text: ''
+      },
+      gallerySection: {
+        title: 'Галерея',
+        images: [
+          '/images/case/bereginya/image1.png',
+          '/images/case/bereginya/image2.png',
+          '/images/case/bereginya/image3.png'
+        ]
+      }
     }
   }
 

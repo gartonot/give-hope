@@ -124,6 +124,11 @@
       animation-timing-function: ease-out;
       animation-delay: 0.6s;
       animation-fill-mode: forwards;
+      width: 280px;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        width: 100%;
+      }
     }
     &__subtext {
       opacity: 0;

@@ -2,7 +2,7 @@
   import { useRuntimeConfig } from '#imports'
 
   const runtimeConfig = useRuntimeConfig()
-  const { vkUrl } = runtimeConfig.public
+  const { whatsAppUrl } = runtimeConfig.public
 </script>
 
 <template>
@@ -16,7 +16,7 @@
           помощь тем, кто в ней нуждается. Мы пришли вместе из разных сфер жизни, возрастов и
           профессий, но нас объединяет желание сделать этот мир лучше.
         </p>
-        <a :href="vkUrl" class="card__button">Стать волонтером</a>
+        <a :href="whatsAppUrl" target="_blank" class="card__button">Стать волонтером</a>
       </div>
     </div>
   </section>
@@ -124,6 +124,8 @@
         margin-top: 30px;
         display: inline-flex;
         white-space: nowrap;
+        position: relative;
+        z-index: 1;
 
         @media screen and (min-width: $breakpoint-sm) {
           font-size: 20px;

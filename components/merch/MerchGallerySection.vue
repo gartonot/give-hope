@@ -10,10 +10,17 @@
     '/images/merch/gallery/image2.png',
     '/images/merch/gallery/image3.png',
     '/images/merch/gallery/image4.png',
-    '/images/merch/gallery/image1.png',
-    '/images/merch/gallery/image2.png',
-    '/images/merch/gallery/image3.png',
-    '/images/merch/gallery/image4.png'
+    '/images/merch/gallery/image5.png',
+    '/images/merch/gallery/image6.png',
+    '/images/merch/gallery/image7.png',
+    '/images/merch/gallery/image8.png',
+    '/images/merch/gallery/image9.png',
+    '/images/merch/gallery/image10.png',
+    '/images/merch/gallery/image11.png',
+    '/images/merch/gallery/image12.png',
+    '/images/merch/gallery/image13.png',
+    '/images/merch/gallery/image14.png',
+    '/images/merch/gallery/image15.png'
   ]
 
   const breakpoints = {

@@ -1,50 +1,13 @@
 <script lang="ts" setup>
+  import { toRefs } from '#imports'
   import AppHeadline from '~/components/ui/AppHeadline.vue'
 
-  const casesList = [
-    {
-      id: 1,
-      title: 'Ремонт №1',
-      name: 'Хомич Анатолй Семёнович',
-      image: '/images/case/repair-1.png',
-      href: '/case/remont-1'
-    },
-    {
-      id: 2,
-      title: 'Ремонт №2',
-      name: 'Вера Евгеньевна',
-      image: '/images/case/repair-2.png',
-      href: '/case/remont-2'
-    },
-    {
-      id: 3,
-      title: 'Ремонт №3',
-      name: 'Римма Сергеевна',
-      image: '/images/case/repair-3.png',
-      href: '/case/remont-3'
-    },
-    {
-      id: 4,
-      title: 'Ремонт №4',
-      name: 'Любовь Михайловна',
-      image: '/images/case/repair-4.png',
-      href: '/case/remont-4'
-    },
-    {
-      id: 5,
-      title: 'Ремонт №5',
-      name: 'Петр Анатольевич',
-      image: '/images/case/repair-5.png',
-      href: '/case/remont-5'
-    },
-    {
-      id: 6,
-      title: 'Ремонт №6',
-      name: 'семьи Рузаковых',
-      image: '/images/case/repair-6.png',
-      href: '/case/remont-6'
-    }
-  ]
+  interface IProps {
+    casesList: any
+  }
+
+  const props = defineProps<IProps>()
+  const { casesList } = toRefs(props)
 </script>
 
 <template>
@@ -88,6 +51,7 @@
     &__image {
       object-fit: cover;
       border-radius: 25px;
+      width: 100%;
     }
 
     &__info {
@@ -141,7 +105,6 @@
 
       &-item {
         width: 100%;
-        flex-grow: 1;
 
         @media screen and (min-width: $breakpoint-md) {
           width: calc(100% / 2 - 20px);

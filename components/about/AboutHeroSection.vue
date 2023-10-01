@@ -167,11 +167,12 @@
       margin-inline: auto;
 
       @media screen and (min-width: $breakpoint-sm) {
-        padding-block: 40px;
+        padding-block: 90px;
       }
     }
     &__image-background {
       position: relative;
+
       &:before {
         content: '';
         position: absolute;
@@ -183,6 +184,7 @@
         width: 50%;
         left: 0;
         right: 0;
+        top: -30px;
         border: 1px solid $blue-color;
         border-radius: 26px;
         transform: rotate(21.329deg);
@@ -204,7 +206,7 @@
 
       @media screen and (min-width: $breakpoint-sm) {
         min-width: 498px;
-        height: 436px;
+        height: auto;
       }
     }
     &__target {

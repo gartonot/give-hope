@@ -38,7 +38,6 @@
           <div class="product-card__color" :style="{ backgroundColor: product.color }" />
         </div>
       </div>
-      <button class="shop-section__button">В магазин</button>
     </div>
   </section>
 </template>

@@ -3,12 +3,14 @@
   import MerchShopSection from '~/components/merch/MerchShopSection.vue'
   import MerchGallerySection from '~/components/merch/MerchGallerySection.vue'
   import SubscribeNewsletter from '~/components/SubscribeNewsletter.vue'
+  import MerchSliderSection from '~/components/merch/MerchSliderSection.vue'
 </script>
 
 <template>
   <main class="merch">
     <merch-hero-section />
     <merch-shop-section />
+    <merch-slider-section />
     <merch-gallery-section />
     <subscribe-newsletter class="subscribe-section" />
   </main>
