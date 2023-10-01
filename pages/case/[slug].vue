@@ -4,6 +4,7 @@
   import { useRoute } from '#imports'
   import CaseBodySection from '~/components/case/CaseBodySection.vue'
   import CaseGallerySection from '~/components/case/CaseGallerySection.vue'
+  import CaseVideoSection from '~/components/case/CaseVideoSection.vue'
 
   const route = useRoute()
   const slug = route.params.slug as string
@@ -177,6 +178,10 @@
       }
     },
     'psy-klimentevo': {
+      videos: {
+        after: '/videos/cases/cozy-old-age/psy-klimentevo/before.mp4',
+        before: '/videos/cases/cozy-old-age/psy-klimentevo/after.mp4'
+      },
       heroSection: {
         title: 'Уютная старость №1',
         image: {
@@ -292,7 +297,8 @@
 
 <template>
   <main class="case">
-    <case-hero-section :settings="currentCase.heroSection" />
+    <case-hero-section v-if="!currentCase.videos" :settings="currentCase.heroSection" />
+    <case-video-section v-else :videos="currentCase.videos" />
     <case-body-section :settings="currentCase.bodySection" class="body-section" />
     <case-gallery-section :settings="currentCase.gallerySection" class="gallery-section" />
     <subscribe-newsletter class="subscribe-section" />
