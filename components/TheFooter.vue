@@ -92,7 +92,7 @@
           </button>
         </div>
       </div>
-      <div class="footer-project-info">© 2020 Благотворительный фонд "Дари Надежду"</div>
+      <div class="footer-project-info">© 2023 Благотворительный фонд "Дари Надежду"</div>
     </div>
   </footer>
 </template>

@@ -118,9 +118,6 @@
     @media screen and (min-width: $breakpoint-lg) {
       padding-bottom: 100px;
     }
-    &__title {
-      color: $primary-color;
-    }
     &__content {
       margin-top: 20px;
     }
