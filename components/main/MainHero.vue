@@ -109,7 +109,7 @@
     position: relative;
     $animation-duration-hands: 0.8s;
     $animation-duration-text: 0.6s;
-    padding-bottom: 125px;
+    padding-bottom: 200px;
 
     @media screen and (min-width: $breakpoint-md) {
       padding-bottom: 260px;
@@ -124,7 +124,7 @@
       animation-timing-function: ease-out;
       animation-delay: 0.6s;
       animation-fill-mode: forwards;
-      width: 280px;
+      width: 320px;
 
       @media screen and (min-width: $breakpoint-sm) {
         width: 100%;
@@ -132,13 +132,17 @@
     }
     &__subtext {
       opacity: 0;
-      margin-top: 50px;
+      margin-top: 0;
       margin-inline: auto;
       animation-name: animationFromBottom;
       animation-duration: $animation-duration-text;
       animation-timing-function: ease-out;
       animation-delay: 0.7s;
       animation-fill-mode: forwards;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-top: 50px;
+      }
     }
     @keyframes animationFromBottom {
       0% {
@@ -155,7 +159,7 @@
       &-right {
         position: absolute;
         opacity: 0;
-        top: 250px;
+        top: 300px;
         max-width: 100%;
 
         @media screen and (min-width: $breakpoint-md) {

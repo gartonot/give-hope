@@ -95,15 +95,11 @@
     }
 
     &__dialog {
-      padding: 20px 20px 20px;
+      padding: 20px;
       background-color: $blue-dark-color;
       border-radius: 20px;
       max-width: 320px;
       min-width: 320px;
-
-      @media screen and (min-width: $breakpoint-sm) {
-        padding: 30px 30px 50px;
-      }
 
       &-program {
         width: 100%;
@@ -111,7 +107,7 @@
         background-color: $white-color;
         border: 1px solid transparent;
         border-radius: 15px;
-        padding: 10px 20px 10px 10px;
+        padding: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -159,7 +155,7 @@
 
       &-input-email {
         border: 1px solid transparent;
-        border-radius: 9px;
+        border-radius: 8px;
         background-color: $white-color;
         padding: 8px;
         font-size: 16px;
@@ -170,11 +166,11 @@
         margin-top: 20px;
       }
       &-send {
-        border-radius: 20px;
+        border-radius: 8px;
         border: 1px solid $white-color;
         background: linear-gradient(180deg, $blue-color 0%, rgba(120, 168, 239, 0) 100%);
         color: $white-color;
-        font-size: 25px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 700;
         line-height: 111%;
@@ -182,11 +178,6 @@
         width: 100%;
         margin-top: 16px;
         cursor: pointer;
-
-        @media screen and (min-width: $breakpoint-sm) {
-          font-size: 20px;
-          padding-block: 20px;
-        }
       }
       &-description {
         color: $white-color;
@@ -201,10 +192,6 @@
     &__button-wrapper {
       margin-top: 10px;
       text-align: end;
-
-      @media screen and (min-width: $breakpoint-sm) {
-        margin-top: 30px;
-      }
     }
 
     &__button {
@@ -221,7 +208,7 @@
 
       @media screen and (min-width: $breakpoint-sm) {
         font-size: 25px;
-        padding: 14px 52px;
+        padding: 10px 52px;
       }
     }
   }

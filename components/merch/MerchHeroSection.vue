@@ -127,7 +127,6 @@
       }
     }
     &__image {
-      border: 5px solid $blue-color;
       border-radius: 20px;
       object-fit: cover;
       margin-top: 30px;
