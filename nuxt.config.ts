@@ -36,7 +36,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       vkUrl: 'https://vk.com/darinadezhduu',
-      whatsAppUrl: 'https://wa.me/+79856222101'
+      whatsAppUrl: 'https://wa.me/+79856222101',
+      apiUrl: 'https://darinadezhdu-api.ru'
     }
   }
 })

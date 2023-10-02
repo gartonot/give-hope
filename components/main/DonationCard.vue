@@ -1,8 +1,17 @@
 <script setup lang="ts">
+  // import mainRepository from '~/services/repositories/main-repository'
+
   const donations = 215230
   const donationsTotal = 500000
   const donationsRemained = donationsTotal - donations
   const donationsProcess = `${(donations * 100) / donationsTotal}%`
+
+  // const params = {
+  // fund: 'fund 1'
+  // }
+
+  // const paymentsResponse = await mainRepository.payment(params)
+  // console.log(paymentsResponse)
 </script>
 
 <template>

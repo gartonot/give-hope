@@ -5,13 +5,6 @@
 
 <template>
   <section class="donations container">
-    <img
-      src="/images/main/particle/line.svg"
-      class="particle-line"
-      width="841"
-      height="867"
-      alt="line"
-    />
     <h2 class="donations__title">Делай добро</h2>
     <p class="donations__description">
       Здесь вы можете сделать разовое пожертвование и оплатить продуктовый набор для одиноких
@@ -29,19 +22,7 @@
 </template>
 
 <style lang="scss" scoped>
-  .particle-line {
-    position: absolute;
-    left: -60%;
-    top: -50%;
-    display: none;
-
-    @media screen and (min-width: $breakpoint-lg) {
-      display: block;
-    }
-  }
   .donations {
-    position: relative;
-
     &__title {
       font-size: 24px;
       font-weight: 700;
