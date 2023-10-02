@@ -2,6 +2,7 @@
   import CustomCheckbox from '~/components/CustomCheckbox.vue'
   import { useNuxtApp } from '#imports'
   import { ref } from 'vue'
+  import mainRepository from '~/services/repositories/main-repository'
 
   const { $helpChat } = useNuxtApp()
   const programs = [
@@ -31,8 +32,27 @@
     }
   ]
   const selectedProgram = ref<number | null>(null)
+  const otherSum = ref()
   const selectProgram = (id: number) => {
     selectedProgram.value = id === selectedProgram.value ? null : id
+  }
+
+  const sendForm = async () => {
+    let donat_amount = 0
+
+    if (selectedProgram.value === null) {
+      if (otherSum.value) {
+        donat_amount = otherSum.value
+      }
+    } else {
+      const selectedCard = programs.find(({ id }) => selectedProgram.value === id)
+      donat_amount = selectedCard.price
+    }
+
+    if (donat_amount) {
+      const { redirect_url } = await mainRepository.payment({ donat_amount: donat_amount })
+      window.open(redirect_url)
+    }
   }
 </script>
 
@@ -58,14 +78,14 @@
 
         <div class="help-chat__dialog-input-wrapper">
           Другая сумма —
-          <input class="help-chat__dialog-input" type="text" placeholder="500 ₽" />
+          <input
+            v-model="otherSum"
+            class="help-chat__dialog-input"
+            type="text"
+            placeholder="500 ₽"
+          />
         </div>
-        <input
-          class="help-chat__dialog-input-email"
-          type="text"
-          placeholder="Ваш e-mail для чека"
-        />
-        <button class="help-chat__dialog-send">Пожертвовать</button>
+        <button class="help-chat__dialog-send" @click="sendForm()">Пожертвовать</button>
         <p class="help-chat__dialog-description">
           Совершая пожертвование, вы соглашаетесь с условиями договора-оферты и политики
           конфиденцальности
@@ -153,18 +173,6 @@
         width: 50%;
       }
 
-      &-input-email {
-        border: 1px solid transparent;
-        border-radius: 8px;
-        background-color: $white-color;
-        padding: 8px;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 111%;
-        width: 100%;
-        margin-top: 20px;
-      }
       &-send {
         border-radius: 8px;
         border: 1px solid $white-color;

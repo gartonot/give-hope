@@ -2,13 +2,11 @@
   import { ref } from '#imports'
   import { PackageIcon } from '~/components/icons'
   import AppButton from '~/components/ui/AppButton.vue'
+  import mainRepository from '~/services/repositories/main-repository'
 
-  const sendSetOfWeekForm = () => {
-    const formData = {
-      sum: 750
-    }
-
-    console.log(formData)
+  const sendSetOfWeekForm = async () => {
+    const { redirect_url } = await mainRepository.payment({ donat_amount: 2600 })
+    window.open(redirect_url)
   }
 
   const setWeek = [

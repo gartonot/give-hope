@@ -13,7 +13,8 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       title: 'Благотворительный Фонд',
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
+      script: [{ src: 'https://widget.cloudpayments.ru/bundles/cloudpayments' }]
     }
   },
   css: ['~/assets/scss/global.scss', '~/assets/scss/fonts.scss'],
@@ -36,8 +37,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       vkUrl: 'https://vk.com/darinadezhduu',
-      whatsAppUrl: 'https://wa.me/+79856222101',
-      apiUrl: 'https://darinadezhdu-api.ru'
+      whatsAppUrl: 'https://wa.me/+79856222101'
     }
   }
 })

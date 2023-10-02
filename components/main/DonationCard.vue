@@ -1,33 +1,97 @@
 <script setup lang="ts">
-  // import mainRepository from '~/services/repositories/main-repository'
+  import { ref } from '#imports'
+  import mainRepository from '~/services/repositories/main-repository'
 
-  const donations = 215230
-  const donationsTotal = 500000
-  const donationsRemained = donationsTotal - donations
-  const donationsProcess = `${(donations * 100) / donationsTotal}%`
+  const params = {
+    fund: 'fund 1'
+  }
+  const paymentsResponse = await mainRepository.paymentFund(params)
 
-  // const params = {
-  // fund: 'fund 1'
-  // }
+  const donationsRemained = paymentsResponse.allSum - paymentsResponse.currentSum
+  const donationsProcess = `${paymentsResponse.percent}%`
 
-  // const paymentsResponse = await mainRepository.payment(params)
-  // console.log(paymentsResponse)
+  const sum = ref()
+  const formIsShown = ref(false)
+  const sendForm = async () => {
+    if (sum.value) {
+      const { redirect_url } = await mainRepository.paymentForFund({
+        donat_amount: sum.value,
+        fund: 'fund 1'
+      })
+      window.open(redirect_url)
+    }
+  }
+  const openForm = () => (formIsShown.value = true)
 </script>
 
 <template>
   <div class="donations">
-    <p class="donations__balance">{{ donations }}&nbsp;₽</p>
+    <p class="donations__balance">{{ paymentsResponse.currentSum.toLocaleString() }} ₽</p>
     <div class="donations__slider">
-      <p class="donations__slider-text">Из {{ donationsTotal }}&nbsp;₽</p>
+      <p class="donations__slider-text">Из {{ paymentsResponse.allSum.toLocaleString() }}&nbsp;₽</p>
       <p class="donations__slider-text">
-        <strong>{{ donationsRemained }}&nbsp;₽</strong>
+        <strong>{{ donationsRemained.toLocaleString() }}&nbsp;₽</strong>
       </p>
     </div>
-    <button class="donations__button">Помочь</button>
+    <div class="form">
+      <div v-if="formIsShown" class="form-fields">
+        <input v-model="sum" type="number" inputmode="numeric" />
+        <button @click="sendForm()">
+          <svg
+            width="36"
+            height="30"
+            viewBox="0 0 36 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M35.4142 16.4142C36.1953 15.6332 36.1953 14.3668 35.4142 13.5858L22.6863 0.857864C21.9052 0.0768158 20.6389 0.0768158 19.8579 0.857864C19.0768 1.63891 19.0768 2.90524 19.8579 3.68629L31.1716 15L19.8579 26.3137C19.0768 27.0948 19.0768 28.3611 19.8579 29.1421C20.6389 29.9232 21.9052 29.9232 22.6863 29.1421L35.4142 16.4142ZM0 17L34 17V13L0 13L0 17Z"
+              fill="#fff"
+            />
+          </svg>
+        </button>
+      </div>
+      <button v-else id="payButton" class="donations__button" @click="openForm()">Помочь</button>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+  .form {
+    margin-top: 20px;
+    min-height: 65px;
+    max-height: 65px;
+    height: 65px;
+
+    input,
+    button {
+      min-height: 65px;
+      max-height: 65px;
+      height: 65px;
+    }
+    .form-fields {
+      display: flex;
+      gap: 12px;
+
+      input {
+        width: 100%;
+        padding: 4px 12px;
+        border-radius: 8px;
+        border: 1px solid #9a9a9a;
+        outline: none;
+      }
+
+      button {
+        background-color: $blue-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
   .donations {
     width: 100%;
     border-radius: 8px;
@@ -86,9 +150,9 @@
       font-weight: 700;
       line-height: 111%;
       padding: 20px;
-      margin-top: 20px;
       color: $white-color;
       width: 100%;
+      cursor: pointer;
     }
   }
 </style>

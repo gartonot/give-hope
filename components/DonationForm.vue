@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import { ref, watch, toRefs } from '#imports'
   import AppButton from '~/components/ui/AppButton.vue'
+  import mainRepository from '~/services/repositories/main-repository'
 
   interface IProps {
     frequencyIsShown?: boolean
@@ -90,21 +91,28 @@
   }
 
   const formData = ref<IFormData>({
-    sum: 0,
+    sum: 100,
     frequency: 'Разово'
   })
 
-  const sendForm = () => {
+  const sendOnly = async () => {
     if (customSum.value) {
       formData.value.sum = Number(customSum.value)
     } else {
       const selectedSum = buttonsSum.value.find(button => button.isSelect)
       formData.value.sum = selectedSum?.sum ?? 0
     }
+
+    const { redirect_url } = await mainRepository.payment({ donat_amount: formData.value.sum })
+    window.open(redirect_url)
+  }
+  const sendForm = () => {
     const selectedFrequency = buttonsFrequency.value.find(button => button.isSelect)
     formData.value.frequency = selectedFrequency?.label ?? 'Разово'
 
-    console.log(formData.value)
+    if (formData.value.frequency === 'Разово') {
+      sendOnly()
+    }
   }
 </script>
 

@@ -1,5 +1,10 @@
 <script setup lang="ts">
   import DonationCard from '~/components/main/DonationCard.vue'
+  import { ref } from '#imports'
+
+  const modalIsShown = ref(false)
+  const openModal = () => (modalIsShown.value = true)
+  const modalClose = () => (modalIsShown.value = false)
 </script>
 
 <template>
@@ -18,7 +23,9 @@
               ничего невозможного для нас с вами!
             </p>
             <div class="collecting-money__card-links">
-              <a class="collecting-money__card-link2" href="">Смотреть видео</a>
+              <a class="collecting-money__card-link2" href="#" @click.prevent="openModal()"
+                >Смотреть видео</a
+              >
             </div>
           </div>
         </div>
@@ -44,12 +51,65 @@
           огромнейшая помощь.Теперь осталось найти средства на оплату строительных работ и здесь нам
           не обойтись без вашей помощи!
         </p>
+        <ul>
+          <li>ОБЩАЯ СУММА СБОРА : 4 586 929 ₽</li>
+          <li>СОБРАНО НА ДАННЫЙ МОМЕНТ : 1.500.000 ₽</li>
+          <li>ОСТАТОК СБОРА : 3.086.929 ₽</li>
+        </ul>
+      </div>
+    </div>
+    <div :class="['modal', { 'modal-shown': modalIsShown }]" @click="modalClose()">
+      <div class="modal__container" @click.stop>
+        <video src="/videos/urgent-help-video.mp4" controls></video>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped lang="scss">
+  .modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0 0 0 / 5%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+
+    &.modal-shown {
+      opacity: 1;
+      visibility: visible;
+
+      .modal__container {
+        transform: unset;
+      }
+    }
+    &__container {
+      background-color: $white-color;
+      padding: 24px 28px;
+      border-radius: 20px;
+      transform: translateY(100px);
+      transition: 0.2s;
+      margin: 20px;
+      max-width: 80%;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        margin: unset;
+      }
+    }
+  }
+  video {
+    width: 100%;
+    margin: auto;
+    display: block;
+
+    @media screen and (min-width: $breakpoint-md) {
+      width: 80%;
+    }
+  }
   .main-help {
     padding-top: 35px;
     overflow: hidden;

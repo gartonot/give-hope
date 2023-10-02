@@ -11,7 +11,6 @@
 <template>
   <main class="main">
     <main-hero />
-    <main-urgent-help v-if="false" class="main__urgent-help" />
     <main-help />
     <main-donation class="main__donation" />
     <main-programs id="program" class="main__programs" />
