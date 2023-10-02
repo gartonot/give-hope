@@ -76,30 +76,6 @@
       }
     }
 
-    &__button {
-      padding: 18px 62px;
-      border-radius: 25px;
-      border: 1px solid transparent;
-      background-color: $blue-color;
-      color: $white-color;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 111%;
-      margin-top: 100px;
-      display: flex;
-      white-space: nowrap;
-      cursor: pointer;
-
-      @media screen and (min-width: $breakpoint-sm) {
-        font-size: 20px;
-      }
-
-      @media screen and (min-width: $breakpoint-lg) {
-        font-size: 25px;
-      }
-    }
-
     .product-card {
       &__title {
         font-size: 16px;
