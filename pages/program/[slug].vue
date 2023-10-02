@@ -139,16 +139,30 @@
         {
           id: 5,
           title: 'Ремонт №5',
-          name: 'Петр Анатольевич',
-          image: '/images/case/repair-5.png',
+          name: 'семьи Рузаковых',
+          image: '/images/case/repair-6.png',
           href: '/case/remont-5'
         },
         {
           id: 6,
           title: 'Ремонт №6',
-          name: 'семьи Рузаковых',
-          image: '/images/case/repair-6.png',
+          name: 'Петр Анатольевич',
+          image: '/images/case/repair-5.png',
           href: '/case/remont-6'
+        },
+        {
+          id: 7,
+          title: 'Ремонт №7',
+          name: 'Васильченко Надежды Петровны',
+          image: '/images/case/repair-7/img-3.png',
+          href: '/case/remont-7'
+        },
+        {
+          id: 8,
+          title: 'Ремонт №8',
+          name: 'Гоша',
+          image: '/images/case/repair-8/img-10.jpg',
+          href: '/case/remont-8'
         }
       ],
       hasSlider: false,

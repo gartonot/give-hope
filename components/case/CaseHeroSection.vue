@@ -4,10 +4,11 @@
   interface IProps {
     settings: {
       title: string
-      image: {
+      image?: {
         src: string
         alt: string
       }
+      video?: string
       description: string
     }
   }
@@ -20,7 +21,18 @@
     <div class="container">
       <h1 class="case-hero__title">{{ settings.title }}</h1>
       <div class="case-hero__image-wrapper">
-        <img class="case-hero__image" :src="settings.image.src" :alt="settings.image.alt" />
+        <img
+          v-if="settings.image"
+          class="case-hero__image"
+          :src="settings.image.src"
+          :alt="settings.image.alt"
+        />
+        <video
+          v-if="settings.video"
+          class="case-hero__image"
+          :src="settings.video"
+          controls
+        ></video>
       </div>
       <p class="case-hero__description">{{ settings.description }}</p>
     </div>
@@ -106,6 +118,8 @@
     &__image {
       margin-top: 75px;
       width: 100%;
+      max-height: 500px;
+      object-fit: cover;
       border-radius: 8px;
     }
 
