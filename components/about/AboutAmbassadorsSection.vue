@@ -19,6 +19,10 @@
     {
       name: 'Ксения Шипилова',
       image: '/images/about/ambassadors/ksenia.png'
+    },
+    {
+      name: 'Маркова Кристина',
+      image: '/images/about/ambassadors/kristina-2.png'
     }
   ]
 </script>
@@ -39,12 +43,6 @@
             {{ ambassador.name }}
           </p>
         </div>
-        <img
-          src="/images/about/ambassadors/message-image.svg"
-          alt="message image"
-          loading="lazy"
-          class="ambassador-card message-image"
-        />
       </div>
     </div>
   </section>
@@ -56,15 +54,6 @@
 
     .ambassadors-section-container {
       position: relative;
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 795px;
-        height: 1027px;
-        left: -300px;
-        background-image: url('/images/about/ambassadors/background-line.png');
-      }
     }
 
     &__title {

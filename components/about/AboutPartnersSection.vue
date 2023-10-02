@@ -2,8 +2,9 @@
   const partners = [
     { image: '/images/about/partners/avito.svg' },
     { image: '/images/about/partners/esve.svg' },
-    { image: '/images/about/partners/mosinjprogect.svg' },
+    { image: '/images/about/partners/gazprom.svg' },
     { image: '/images/about/partners/fond.svg' },
+    { image: '/images/about/partners/mosinjprogect.svg' },
     { image: '/images/about/partners/mgimo.svg' },
     { image: '/images/about/partners/keep-looking.svg' },
     { image: '/images/about/partners/leo.svg' },
@@ -20,6 +21,7 @@
           v-for="(partner, index) in partners"
           :key="index"
           :src="partner.image"
+          class="partners-img"
           alt="partner"
           loading="lazy"
         />
@@ -81,8 +83,22 @@
     &__partners {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
       margin-top: 80px;
+      gap: 40px;
+
+      .partners-img {
+        width: calc(100% / 2 - 40px);
+
+        @media screen and (min-width: $breakpoint-sm) {
+          width: calc(100% / 4 - 40px);
+        }
+
+        &:last-child {
+          margin-top: 20px;
+          margin-inline: auto;
+          width: fit-content;
+        }
+      }
     }
   }
 </style>
