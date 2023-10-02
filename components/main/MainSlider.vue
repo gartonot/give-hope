@@ -13,12 +13,40 @@
   const { $viewport } = useNuxtApp()
 
   const sliderImages = [
-    '/images/sliders/slide-1.png',
-    '/images/sliders/slide-2.png',
-    '/images/sliders/slide-3.png',
-    '/images/sliders/slide-1.png',
-    '/images/sliders/slide-2.png',
-    '/images/sliders/slide-3.png'
+    '/images/sliders/img-1.jpg',
+    '/images/sliders/img-2.jpg',
+    '/images/sliders/img-3.jpg',
+    '/images/sliders/img-4.jpg',
+    '/images/sliders/img-5.jpg',
+    '/images/sliders/img-6.jpg',
+    '/images/sliders/img-7.jpg',
+    '/images/sliders/img-8.jpg',
+    '/images/sliders/img-9.jpg',
+    '/images/sliders/img-10.jpg',
+    '/images/sliders/img-11.jpg',
+    '/images/sliders/img-12.jpg',
+    '/images/sliders/img-13.jpg',
+    '/images/sliders/img-14.jpg',
+    '/images/sliders/img-15.jpg',
+    '/images/sliders/img-16.jpg',
+    '/images/sliders/img-17.jpg',
+    '/images/sliders/img-18.jpg',
+    '/images/sliders/img-19.jpg',
+    '/images/sliders/img-20.jpg',
+    '/images/sliders/img-21.jpg',
+    '/images/sliders/img-22.jpg',
+    '/images/sliders/img-23.jpg',
+    '/images/sliders/img-24.jpg',
+    '/images/sliders/img-25.jpg',
+    '/images/sliders/img-26.jpg',
+    '/images/sliders/img-27.jpg',
+    '/images/sliders/img-28.jpg',
+    '/images/sliders/img-29.jpg',
+    '/images/sliders/img-30.jpg',
+    '/images/sliders/img-31.jpg',
+    '/images/sliders/img-32.jpg',
+    '/images/sliders/img-33.jpg',
+    '/images/sliders/img-34.png'
   ]
 
   const modules = [Pagination]
