@@ -338,7 +338,7 @@
       heroSection: {
         title: 'Пожилым людям №2',
         image: {
-          src: '/images/case/cozy-old-age/title.png',
+          src: '/images/case/cozy-old-age/case1.png',
           alt: 'case2'
         },
         description: ''
