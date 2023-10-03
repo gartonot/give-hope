@@ -46,7 +46,7 @@
     '/images/sliders/img-31.jpg',
     '/images/sliders/img-32.jpg',
     '/images/sliders/img-33.jpg',
-    '/images/sliders/img-34.png'
+    '/images/sliders/img-34.jpg'
   ]
 
   const modules = [Pagination]

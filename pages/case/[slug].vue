@@ -208,7 +208,7 @@
         images: [
           '/images/case/repair-6/img-1.jpg',
           '/images/case/repair-6/img-2.jpg',
-          '/images/case/repair-6/img-3.jpg'
+          '/images/case/repair-6/img-3.png'
         ]
       }
     },
@@ -237,8 +237,8 @@
     },
     'remont-8': {
       videos: {
-        after: '/videos/cases/repair-8/before.mp4',
-        before: '/videos/cases/repair-8/after.mp4'
+        before: '/videos/cases/repair-8/before.mp4',
+        after: '/videos/cases/repair-8/after.mp4'
       },
       heroSection: {
         title: 'Ремонт №8',
@@ -279,8 +279,8 @@
     },
     'psy-klimentevo': {
       videos: {
-        after: '/videos/cases/cozy-old-age/psy-klimentevo/before.mp4',
-        before: '/videos/cases/cozy-old-age/psy-klimentevo/after.mp4'
+        before: '/videos/cases/cozy-old-age/psy-klimentevo/before.mp4',
+        after: '/videos/cases/cozy-old-age/psy-klimentevo/after.mp4'
       },
       heroSection: {
         title: 'Уютная старость №1',
