@@ -168,11 +168,11 @@
       heroSection: {
         title: 'Ремонт №5',
         video: '/videos/ruzakov.mp4',
-        description: 'Татьня Олеговна (63 года) и Тимур Папиушвилли (72 года)'
+        description: 'Ремонт Рузаковы'
       },
       bodySection: {
-        title: 'Чем мы помогли?',
-        text: '</br></br>' + '</br></br>' + ''
+        title: '',
+        text: ''
       },
       gallerySection: {
         title: 'Галерея',
@@ -238,7 +238,7 @@
     'remont-8': {
       videos: {
         after: '/videos/cases/repair-8/before.mp4',
-        before: '/videos/cases/repair-8//after.mp4'
+        before: '/videos/cases/repair-8/after.mp4'
       },
       heroSection: {
         title: 'Ремонт №8',
