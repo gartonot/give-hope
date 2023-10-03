@@ -35,6 +35,12 @@
       image: '/images/about/team/other.png',
       text: 'Юрист',
       class: ''
+    },
+    {
+      name: 'Алексей Чухутин',
+      image: '/images/about/team/alex.png',
+      text: 'Координатор по работе с волонтерами',
+      class: ''
     }
   ]
 </script>

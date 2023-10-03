@@ -12,9 +12,8 @@
       <div class="volunteers-section__card">
         <img src="/images/about/volunteers/avatars.png" alt="avatars" class="card__avatars" />
         <p class="card__text">
-          Наша команда волонтеров - это замечательная группа людей, объединенных общей целью -
-          помощь тем, кто в ней нуждается. Мы пришли вместе из разных сфер жизни, возрастов и
-          профессий, но нас объединяет желание сделать этот мир лучше.
+          Команда волонтеров Фонда «Дари Надежду» это комьюнити замечательных и добрых людей из
+          разных сфер деятельности , объединенные общей целью сделать этот мир лучше.
         </p>
         <a :href="whatsAppUrl" target="_blank" class="card__button">Стать волонтером</a>
       </div>
@@ -105,10 +104,10 @@
         margin-inline: auto;
         margin-top: 34px;
         color: $grey-color;
-        font-size: 14px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
-        line-height: 111%;
+        line-height: 1.11;
       }
 
       &__button {

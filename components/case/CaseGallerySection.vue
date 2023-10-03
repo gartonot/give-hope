@@ -35,7 +35,7 @@
           pagination
           :modules="modules"
         >
-          <swiper-slide v-for="(img, index) in settings.images" :key="index" v-slot="{ isActive }">
+          <swiper-slide v-for="(img, index) in settings.images" :key="index" class="cs-slider-item">
             <img :src="img" :alt="`img${index}`" width="440" height="350" class="gallery-card" />
           </swiper-slide>
         </swiper>
@@ -45,6 +45,9 @@
 </template>
 
 <style scoped lang="scss">
+  .cs-slider-item {
+    padding-block: 40px;
+  }
   .case-gallery {
     position: relative;
 

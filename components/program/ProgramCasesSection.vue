@@ -24,9 +24,9 @@
             alt="card image"
           />
           <div class="card-item__info">
-            <p class="">{{ card.title }}</p>
+            <p class="title">{{ card.title }}</p>
             <div class="card-meta">
-              <p class="">{{ card.name }}</p>
+              <p>{{ card.name }}</p>
               <a class="card-item__href" :href="card.href">Подробнее</a>
             </div>
           </div>
@@ -63,12 +63,14 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+
+      .title {
+        text-shadow: 0 0px 4px rgba(60, 60, 60, 0.9);
+      }
     }
     .card-meta {
       display: flex;
-
       margin-top: auto;
-
       flex-direction: column;
 
       @media screen and (min-width: $breakpoint-lg) {

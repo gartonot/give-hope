@@ -19,7 +19,7 @@
       price: 300
     },
     {
-      name: 'Добро до двери',
+      name: 'Дари ремонт',
       id: 3,
       image: '/images/fond3.svg',
       price: 300
@@ -72,8 +72,8 @@
           @click="selectProgram(program.id)"
         >
           <img class="help-chat__dialog-image" :src="program.image" :alt="program.name" />
-          {{ program.name }}
-          <strong>{{ program.price }} ₽</strong>
+          <p class="text">{{ program.name }}</p>
+          <strong class="price">{{ program.price }} ₽</strong>
         </button>
 
         <div class="help-chat__dialog-input-wrapper">
@@ -130,8 +130,14 @@
         padding: 10px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         cursor: pointer;
+
+        .text {
+          margin-left: 20px;
+        }
+        .price {
+          margin-left: auto;
+        }
 
         @media screen and (min-width: $breakpoint-sm) {
           margin-top: 12px;

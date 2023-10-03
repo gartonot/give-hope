@@ -18,7 +18,7 @@
   <section class="slider">
     <div class="container">
       <swiper :slides-per-view="1" :space-between="35" loop pagination :modules="modules">
-        <swiper-slide v-for="(img, index) in images" :key="index">
+        <swiper-slide v-for="(img, index) in images" :key="index" class="cs-slider-item">
           <img :src="img" :alt="`img${index}`" class="gallery-card" />
         </swiper-slide>
       </swiper>
@@ -29,5 +29,8 @@
 <style lang="scss" scoped>
   .slider {
     padding-block: 70px;
+  }
+  .cs-slider-item {
+    padding-block: 40px;
   }
 </style>

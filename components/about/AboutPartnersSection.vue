@@ -5,6 +5,7 @@
     { image: '/images/about/partners/gazprom.svg' },
     { image: '/images/about/partners/fond.svg' },
     { image: '/images/about/partners/mosinjprogect.svg' },
+    { image: '/images/about/partners/obi-logo.svg' },
     { image: '/images/about/partners/mgimo.svg' },
     { image: '/images/about/partners/keep-looking.svg' },
     { image: '/images/about/partners/leo.svg' },
@@ -90,7 +91,7 @@
         width: calc(100% / 2 - 40px);
 
         @media screen and (min-width: $breakpoint-sm) {
-          width: calc(100% / 4 - 40px);
+          width: calc(100% / 5 - 40px);
         }
 
         &:last-child {

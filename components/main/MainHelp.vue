@@ -1,10 +1,5 @@
 <script setup lang="ts">
   import DonationCard from '~/components/main/DonationCard.vue'
-  import { ref } from '#imports'
-
-  const modalIsShown = ref(false)
-  const openModal = () => (modalIsShown.value = true)
-  const modalClose = () => (modalIsShown.value = false)
 </script>
 
 <template>
@@ -22,11 +17,7 @@
               Друзья, мы открываем новый большой и достаточно сложный сбор,но мы ведь знаем, что нет
               ничего невозможного для нас с вами!
             </p>
-            <div class="collecting-money__card-links">
-              <a class="collecting-money__card-link2" href="#" @click.prevent="openModal()"
-                >Смотреть видео</a
-              >
-            </div>
+            <img class="image" src="/images/main/obi.png" width="152" height="60" alt="Obi logo" />
           </div>
         </div>
         <donation-card />
@@ -57,58 +48,18 @@
           <li>ОСТАТОК СБОРА : 3.086.929 ₽</li>
         </ul>
       </div>
-    </div>
-    <div :class="['modal', { 'modal-shown': modalIsShown }]" @click="modalClose()">
-      <div class="modal__container" @click.stop>
-        <video src="/videos/urgent-help-video.mp4" controls></video>
-      </div>
+      <video class="video" src="/videos/urgent-help-video.mp4" controls></video>
     </div>
   </section>
 </template>
 
 <style scoped lang="scss">
-  .modal {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0 0 0 / 5%);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.2s;
-
-    &.modal-shown {
-      opacity: 1;
-      visibility: visible;
-
-      .modal__container {
-        transform: unset;
-      }
-    }
-    &__container {
-      background-color: $white-color;
-      padding: 24px 28px;
-      border-radius: 20px;
-      transform: translateY(100px);
-      transition: 0.2s;
-      margin: 20px;
-      max-width: 80%;
-
-      @media screen and (min-width: $breakpoint-sm) {
-        margin: unset;
-      }
-    }
-  }
-  video {
+  .video {
     width: 100%;
     margin: auto;
     display: block;
-
-    @media screen and (min-width: $breakpoint-md) {
-      width: 80%;
-    }
+    margin-top: 30px;
+    border-radius: 8px;
   }
   .main-help {
     padding-top: 35px;
@@ -160,21 +111,6 @@
       flex-direction: column;
       position: relative;
 
-      &::after {
-        content: '';
-        background-image: url('/images/main/obi.png');
-        position: absolute;
-        width: 150px;
-        height: 60px;
-        right: 0;
-        bottom: 0;
-
-        @media screen and (min-width: $breakpoint-lg) {
-          right: -70px;
-          bottom: 0;
-        }
-      }
-
       @media screen and (min-width: $breakpoint-md) {
         flex-direction: row;
       }
@@ -187,7 +123,7 @@
         margin-inline: auto;
 
         &:before {
-          content: 'Идут сборы';
+          content: 'Идёт сбор';
           position: absolute;
           background-color: $white-color;
           transform: rotate(-30deg);
@@ -219,25 +155,8 @@
         line-height: 120%;
       }
 
-      &__card-links {
-        margin-top: 60px;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      &__card-link1 {
-        color: $grey-color;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 111%;
-      }
-      &__card-link2 {
-        color: $blue-color;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 111%;
+      .image {
+        margin-top: 40px;
       }
     }
 

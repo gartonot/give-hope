@@ -292,21 +292,19 @@
           'Ремонт прачечной в отделении сестринского ухода при Клементьевской участковой больнице.'
       },
       bodySection: {
-        title: 'Чем мы помогли?',
-        text: '</br></br>' + '</br></br>' + ''
+        title: '',
+        text: ''
       },
       gallerySection: {
         title: 'Галерея',
         images: [
           '/images/case/cozy-old-age/image1.png',
           '/images/case/cozy-old-age/image2.png',
-          '/images/case/cozy-old-age/image3.png',
           '/images/case/cozy-old-age/image4.png',
           '/images/case/cozy-old-age/image5.png',
           '/images/case/cozy-old-age/image6.png',
           '/images/case/cozy-old-age/image7.png',
           '/images/case/cozy-old-age/image8.png',
-          '/images/case/cozy-old-age/image9.png',
           '/images/case/cozy-old-age/image10.png'
         ]
       }
@@ -350,16 +348,12 @@
       gallerySection: {
         title: 'Галерея',
         images: [
-          '/images/case/cozy-old-age/image1.png',
-          '/images/case/cozy-old-age/image2.png',
-          '/images/case/cozy-old-age/image3.png',
-          '/images/case/cozy-old-age/image4.png',
-          '/images/case/cozy-old-age/image5.png',
-          '/images/case/cozy-old-age/image6.png',
-          '/images/case/cozy-old-age/image7.png',
-          '/images/case/cozy-old-age/image8.png',
-          '/images/case/cozy-old-age/image9.png',
-          '/images/case/cozy-old-age/image10.png'
+          '/images/case/psy-2/image1.jpg',
+          '/images/case/psy-2/image2.jpg',
+          '/images/case/psy-2/image3.jpg',
+          '/images/case/psy-2/image4.jpg',
+          '/images/case/psy-2/image5.jpg',
+          '/images/case/psy-2/image6.jpg'
         ]
       }
     },

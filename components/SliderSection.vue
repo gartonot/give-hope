@@ -9,12 +9,13 @@
   const { $viewport } = useNuxtApp()
 
   const sliderImages = [
-    '/images/sliders/slide-1.png',
-    '/images/sliders/slide-2.png',
-    '/images/sliders/slide-3.png',
-    '/images/sliders/slide-1.png',
-    '/images/sliders/slide-2.png',
-    '/images/sliders/slide-3.png'
+    '/images/programs/welcome-door/image1.png',
+    '/images/programs/welcome-door/image2.png',
+    '/images/programs/welcome-door/image3.png',
+    '/images/programs/welcome-door/image4.png',
+    '/images/programs/welcome-door/image5.png',
+    '/images/programs/welcome-door/image6.png',
+    '/images/programs/welcome-door/image7.png'
   ]
 
   const modules = [Pagination]

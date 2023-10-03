@@ -21,7 +21,7 @@
       image: '/images/about/ambassadors/ksenia.png'
     },
     {
-      name: 'Маркова Кристина',
+      name: 'Кристина Маркова',
       image: '/images/about/ambassadors/kristina-2.png'
     }
   ]
