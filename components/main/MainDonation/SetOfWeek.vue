@@ -6,7 +6,7 @@
 
   const sendSetOfWeekForm = async () => {
     const { redirect_url } = await mainRepository.payment({ donat_amount: 2600 })
-    window.open(redirect_url)
+    window.location.href = redirect_url
   }
 
   const setWeek = [

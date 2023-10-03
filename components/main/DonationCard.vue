@@ -18,7 +18,7 @@
         donat_amount: sum.value,
         fund: 'fund 1'
       })
-      window.open(redirect_url)
+      window.location.href = redirect_url
     }
   }
   const openForm = () => (formIsShown.value = true)

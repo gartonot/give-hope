@@ -104,7 +104,7 @@
     }
 
     const { redirect_url } = await mainRepository.payment({ donat_amount: formData.value.sum })
-    window.open(redirect_url)
+    window.location.href = redirect_url
   }
   const sendForm = () => {
     const selectedFrequency = buttonsFrequency.value.find(button => button.isSelect)

@@ -51,7 +51,7 @@
 
     if (donat_amount) {
       const { redirect_url } = await mainRepository.payment({ donat_amount: donat_amount })
-      window.open(redirect_url)
+      window.location.href = redirect_url
     }
   }
 </script>
