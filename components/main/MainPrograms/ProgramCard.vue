@@ -20,10 +20,6 @@
 
   const props = defineProps<IProps>()
   const { program } = toRefs(props)
-
-  const openHelpWidget = () => {
-    console.log('open')
-  }
 </script>
 
 <template>
@@ -35,7 +31,7 @@
       {{ program.description }}
     </p>
     <div class="card__buttons">
-      <button type="button" class="button" @click="openHelpWidget()">Хочу помочь</button>
+      <a class="button" href="#donat">Хочу помочь</a>
       <a :href="program.programUrl" class="button button_outlined">Подробнее</a>
     </div>
     <img

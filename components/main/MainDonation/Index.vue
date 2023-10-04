@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <section class="donations container">
+  <section id="donat" class="donations container">
     <h2 class="donations__title">Делай добро</h2>
     <p class="donations__description">
       Здесь вы можете сделать разовое пожертвование и оплатить продуктовый набор для одиноких

@@ -171,9 +171,7 @@
         accountId: userMail, //идентификатор плательщика (обязательно для создания подписки)
         data: data
       },
-      function (options: any) {
-        console.log(options)
-      },
+      function () {},
       function () {}
     )
   }
