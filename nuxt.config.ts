@@ -14,7 +14,7 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       title: 'Благотворительный Фонд',
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
-      script: [{ src: 'https://widget.cloudpayments.ru/bundles/cloudpayments' }]
+      script: [{ src: 'https://widget.cloudpayments.ru/bundles/cloudpayments.js' }]
     }
   },
   css: ['~/assets/scss/global.scss', '~/assets/scss/fonts.scss'],
