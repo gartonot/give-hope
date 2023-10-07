@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import { ref, watch, toRefs } from '#imports'
   import AppButton from '~/components/ui/AppButton.vue'
-  import mainRepository from '~/services/repositories/main-repository'
+  import DonationAccept from '~/components/DonationAccept.vue'
 
   interface IProps {
     frequencyIsShown?: boolean
@@ -96,8 +96,7 @@
   })
 
   const sendOnly = async () => {
-    const { redirect_url } = await mainRepository.payment({ donat_amount: formData.value.sum })
-    window.location.href = redirect_url
+    modalOpen()
   }
 
   const randomUser = () => {
@@ -175,6 +174,11 @@
       function () {}
     )
   }
+
+  const modalIsShown = ref(false)
+
+  const modalOpen = () => (modalIsShown.value = true)
+  const modalClose = () => (modalIsShown.value = false)
 </script>
 
 <template>
@@ -210,10 +214,86 @@
       />
     </div>
     <app-button label="Пожертвовать" class="donation-form__button" @click="sendForm()" />
+    <div :class="['modal', { 'modal-shown': modalIsShown }]" @click="modalClose()">
+      <div class="modal__container" @click.stop>
+        <div class="close-button" @click="modalClose()">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="0.212891"
+              y="2.95435"
+              width="4.17804"
+              height="34.618"
+              transform="rotate(-45 0.212891 2.95435)"
+              fill="#78A8EF"
+            />
+            <rect
+              x="2.95508"
+              y="27.644"
+              width="4.17804"
+              height="34.618"
+              transform="rotate(-135 2.95508 27.644)"
+              fill="#78A8EF"
+            />
+          </svg>
+        </div>
+        <donation-accept :sum="formData.sum" />
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+  .modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0 0 0 / 5%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    z-index: 10;
+
+    &.modal-shown {
+      opacity: 1;
+      visibility: visible;
+
+      .modal__container {
+        transform: unset;
+      }
+    }
+    &__container {
+      background-color: $white-color;
+      padding: 48px 28px 24px 28px;
+      border-radius: 20px;
+      transform: translateY(100px);
+      transition: 0.2s;
+      margin: 20px;
+      position: relative;
+      width: 100%;
+      max-width: 312px;
+
+      .close-button {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        cursor: pointer;
+      }
+
+      @media screen and (min-width: $breakpoint-sm) {
+        margin: unset;
+      }
+    }
+  }
+
   .button-select {
     background-color: transparent;
     padding: 20px;

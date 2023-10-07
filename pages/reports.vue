@@ -7,63 +7,56 @@
     {
       id: 1,
       label: 'Отчёты за январь 2023',
-      url: '/reports/2023/january.pdf',
-      isShown: true
+      url: '/reports/2023/january-2023.pdf'
     },
     {
       id: 2,
       label: 'Отчёты за февраль 2023',
-      isShown: false
+      url: '/reports/2023/february-2023.pdf'
     },
     {
       id: 3,
       label: 'Отчёты за март 2023',
-      isShown: false
+      url: '/reports/2023/march-2023.pdf'
     },
     {
       id: 4,
       label: 'Отчёты за апрель 2023',
-      isShown: false
+      url: '/reports/2023/april-2023.pdf'
     },
     {
       id: 5,
       label: 'Отчёты за май 2023',
-      isShown: false
+      url: '/reports/2023/may-2023.pdf'
     },
     {
       id: 6,
       label: 'Отчёты за июнь 2023',
-      isShown: false
+      url: '/reports/2023/june-2023.pdf'
     },
     {
       id: 7,
-      label: 'Отчёты за июль 2023',
-      isShown: false
+      label: 'Отчёты за июль 2023'
     },
     {
       id: 8,
-      label: 'Отчёты за август 2023',
-      isShown: false
+      label: 'Отчёты за август 2023'
     },
     {
       id: 9,
-      label: 'Отчёты за сентябрь 2023',
-      isShown: false
+      label: 'Отчёты за сентябрь 2023'
     },
     {
       id: 10,
-      label: 'Отчёты за октябрь 2023',
-      isShown: false
+      label: 'Отчёты за октябрь 2023'
     },
     {
       id: 11,
-      label: 'Отчёты за ноябрь 2023',
-      isShown: false
+      label: 'Отчёты за ноябрь 2023'
     },
     {
       id: 12,
-      label: 'Отчёты за декабрь 2023',
-      isShown: false
+      label: 'Отчёты за декабрь 2023'
     }
   ]
   const yearsly = [
