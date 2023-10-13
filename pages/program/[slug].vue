@@ -35,7 +35,7 @@
           id: 1,
           title: 'Ржевский дом-интернат',
           name: '',
-          image: '/images/case/rzhevskij-dom-internat.png',
+          image: '/images/programs/rzhevskij-dom-internat/covermini.jpg',
           href: '/case/rzhevskij-dom-internat'
         },
         {
@@ -43,14 +43,14 @@
           title:
             'Отделение сестринского ухода при Клементьевской участковой больнице (Клементьево)',
           name: '',
-          image: '/images/case/psy-klimentevo.png',
+          image: '/images/programs/psy-klimentevo-2/covermini.jpg',
           href: '/case/psy-klimentevo-2'
         },
         {
           id: 3,
           title: 'ЛОГБУ "Волосовский КЦСОН "Берегиня"',
           name: '',
-          image: '/images/case/bereginya.png',
+          image: '/images/programs/bereginya/covermini.jpg',
           href: '/case/bereginya'
         }
       ],
@@ -82,7 +82,7 @@
           title:
             'Отделение сестринского ухода при Клементьевской участковой больнице (Клементьево)',
           name: '',
-          image: '/images/case/psy-klimentevo.png',
+          image: '/images/case/psy-klimentevo/covermini.jpg',
           href: '/case/psy-klimentevo'
         }
       ],
@@ -114,56 +114,56 @@
           id: 1,
           title: 'Ремонт №1',
           name: 'Хомич Анатолй Семёнович',
-          image: '/images/case/repair-1.png',
+          image: '/images/programs/repair-1/covermini.png',
           href: '/case/remont-1'
         },
         {
           id: 2,
           title: 'Ремонт №2',
           name: 'Вера Евгеньевна',
-          image: '/images/case/repair-2.png',
+          image: '/images/programs/repair-2/covermini.png',
           href: '/case/remont-2'
         },
         {
           id: 3,
           title: 'Ремонт №3',
           name: 'Римма Сергеевна',
-          image: '/images/case/repair-3.png',
+          image: '/images/programs/repair-3/covermini.png',
           href: '/case/remont-3'
         },
         {
           id: 4,
           title: 'Ремонт №4',
           name: 'Любовь Михайловна',
-          image: '/images/case/repair-4.png',
+          image: '/images/programs/repair-4/covermini.png',
           href: '/case/remont-4'
         },
         {
           id: 5,
           title: 'Ремонт №5',
           name: 'семьи Рузаковых',
-          image: '/images/case/repair-6.png',
+          image: '/images/programs/repair-5/covermini.png',
           href: '/case/remont-5'
         },
         {
           id: 6,
           title: 'Ремонт №6',
           name: 'Петр Анатольевич',
-          image: '/images/case/repair-5.png',
+          image: '/images/programs/repair-6/covermini.png',
           href: '/case/remont-6'
         },
         {
           id: 7,
           title: 'Ремонт №7',
           name: 'Васильченко Надежды Петровны',
-          image: '/images/case/repair-7/img-3.png',
+          image: '/images/programs/repair-7/covermini.png',
           href: '/case/remont-7'
         },
         {
           id: 8,
           title: 'Ремонт №8',
           name: 'Гоша',
-          image: '/images/case/repair-8/img-10.jpg',
+          image: '/images/programs/repair-8/covermini.png',
           href: '/case/remont-8'
         }
       ],
